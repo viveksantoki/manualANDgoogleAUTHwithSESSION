@@ -18,7 +18,7 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 // [SH] Require Passport
 var passport = require('passport');
-const router = express.Router();
+const router = express.Router();  
 // [SH] Bring in the data model
 require('./api/models/db');
 // [SH] Bring in the Passport config after model is defined
@@ -47,7 +47,8 @@ app.use(cors());
 
 // [SH] Initialise Passport before using the route middleware
 app.use(passport.initialize());
-
+const a = 100;
+const b = 150;
 // [SH] Use the API routes when path starts with /api
 app.use('/api', routesApi);
 
